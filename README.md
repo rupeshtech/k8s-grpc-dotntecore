@@ -30,16 +30,16 @@ To test gRPC service, we'll use the grpcurl utility:
 1. Download [grpculy utiltiy](https://github.com/fullstorydev/grpcurl/releases)
 2. Run following commands
 
-# list services
+### list services
 grpcurl servername:port list  (for ex: grpcurl localhost:50051 list )
 
-# list methods
+### list methods
 grpcurl servername:port list packagename.servicename (for ex: grpcurl localhost:50051 list Services.Calculator)
 
-# describe method
+### describe method
 grpcurl servername:port describe packagename.servicename.MethodName (for ex: grpcurl localhost:50051 describe  Services.Calculator.AddNumbers)
 
-# Invoke method
+### Invoke method
 grpcurl -d '{requestbody}' servername:port packagename.servicename.MethodName (for ex: grpcurl -d '{"firstNumber":5,"secondNumber":3}' localhost:50051   Services.Calculator/AddNumbers)
 
 if you are getting error: Failed to dial target host "sever": tls: first record does not look like a TLS handshake
