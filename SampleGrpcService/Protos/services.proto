@@ -1,0 +1,41 @@
+syntax = "proto3";
+
+option csharp_namespace = "SampleGrpcService";
+
+package Services;
+
+// The CalculationService
+service Calculator {
+  // Add Numbers
+  rpc AddNumbers (InputNumbers) returns (CalculationResponse);
+  //Multiply Numbers
+  rpc MultiplyNumbers (InputNumbers) returns (CalculationResponse);
+}
+
+// The request message.
+message InputNumbers {
+  int32 firstNumber = 1;
+  int32 secondNumber=2;
+}
+
+// The response message 
+message CalculationResponse {
+  string response = 1;
+  int32 result=2;
+}
+
+// The greeting service definition.
+service Greeter {
+  // Sends a greeting
+  rpc SayHello (HelloRequest) returns (HelloReply);
+}
+
+// The request message containing the user's name.
+message HelloRequest {
+  string name = 1;
+}
+
+// The response message containing the greetings.
+message HelloReply {
+  string message = 1;
+}
