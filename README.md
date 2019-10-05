@@ -51,7 +51,7 @@ For very detailed explanation of visit
 The sample application
 [SampleGrpcService](https://github.com/rupeshtech/k8s-grpc-dotntecore/tree/master/SampleGrpcServ)
 
-![alt text](https://github.com/rupeshtech/k8s-grpc-dotntecore/blob/master/screenshots/vs_16.PNG)
+![alt text](https://github.com/rupeshtech/k8s-grpc-dotntecore/blob/master/screenshots/vs_16.png)
 
 ### Step 3: `Deploy` to kubernetes
 
