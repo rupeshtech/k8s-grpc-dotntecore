@@ -45,8 +45,7 @@ grpcurl -d '{requestbody}' servername:port packagename.servicename.MethodName (f
 if you are getting error: Failed to dial target host "sever": tls: first record does not look like a TLS handshake
 then add **-plaintext** if your host name is **localhost** or use **-insecure**
 
-For very detailed explanation of visit
-[how to setup gRPC server in .NET](https://github.com/rupeshtech/k8s-grpc-dotntecore/blob/master/SampleGrpcService/README.md)
+For very detailed explanation [how to setup gRPC server in .NET](https://github.com/rupeshtech/k8s-grpc-dotntecore/blob/master/SampleGrpcService/README.md)
 
 The sample application
 [SampleGrpcService](https://github.com/rupeshtech/k8s-grpc-dotntecore/tree/master/SampleGrpcServ)

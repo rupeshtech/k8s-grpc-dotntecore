@@ -28,7 +28,7 @@ namespace SampleGrpcService.Services
         {
             return Task.FromResult(new CalculationResponse
             {
-                Response = "Numbers added.",
+                Response = "Numbers multiplied.",
                 Result = request.FirstNumber * request.SecondNumber
             }); ; ;
         }

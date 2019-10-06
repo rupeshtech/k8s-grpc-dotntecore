@@ -18,7 +18,16 @@
 6. Register new service in Starup.cs (onlt needed if steps 3 and 4 are performed)
 7. Configure Kestrel Program.cs to listen on port 50051
 7. Also configure Certificate - optional
-
+ ```sh
+webBuilder.ConfigureKestrel(options =>
+                    {
+                        options.Listen(IPAddress.Any, 50051, listenOptions =>
+                        {
+                            listenOptions.Protocols = HttpProtocols.Http2;
+                            //listenOptions.UseHttps("<path to .pfx file>","<certificate password>");
+                        });
+                    });
+```
 Instead of creating and setting up new gRPC project, you can use project in this repo. So Downlaod and run 
 [SampleGrpcService](https://github.com/rupeshtech/k8s-grpc-dotntecore/tree/master/SampleGrpcService)
 
