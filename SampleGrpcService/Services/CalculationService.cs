@@ -19,7 +19,7 @@ namespace SampleGrpcService.Services
         {
             return Task.FromResult(new CalculationResponse
             {
-                Response = "Numbers added.",
+                Response = "Numbers added successfully.",
                 Result = request.FirstNumber + request.SecondNumber
             }); ; ;
         }
@@ -28,7 +28,7 @@ namespace SampleGrpcService.Services
         {
             return Task.FromResult(new CalculationResponse
             {
-                Response = "Numbers multiplied.",
+                Response = "Numbers multiplied successfully.",
                 Result = request.FirstNumber * request.SecondNumber
             }); ; ;
         }

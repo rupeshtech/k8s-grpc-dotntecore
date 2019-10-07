@@ -98,4 +98,4 @@ endpoints.MapGrpcService<ReflectionImplementation>();
 
 #### Screenshots
 ![alt text](https://github.com/rupeshtech/k8s-grpc-dotntecore/blob/master/screenshots/test_aks.PNG)
-![alt text](https://github.com/rupeshtech/k8s-grpc-dotntecore/blob/master/screenshots/vs_16.PNG)
+![alt text](https://github.com/rupeshtech/k8s-grpc-dotntecore/blob/master/screenshots/vs_16.png)

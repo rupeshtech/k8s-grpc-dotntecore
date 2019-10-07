@@ -13,9 +13,9 @@
 1. Create Azure kubernetes Cluster
 
 ```sh
-az aks create -g <resourceGroupName> --name <kubernetes-cluster-name>  --service-principal <servicePrincipalId> --client-secret <clientSecretId>
+az aks create -g <resourceGroupName> --name <kubernetes-cluster-name>  --service-principal <servicePrincipalId> --client-secret <clientSecret>
 ```
-2. Create a public (static) IP address in the resource group MC_<resourceGroupName>_location and note the dns name
+2. Create a public (static) IP address in the resource group MC_resourceGroupName_location and note the dns name
 3. Configure the route traffic to the ingress controller
 
 ```sh

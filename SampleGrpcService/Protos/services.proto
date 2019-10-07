@@ -2,7 +2,7 @@ syntax = "proto3";
 
 option csharp_namespace = "SampleGrpcService";
 
-package Services;
+package services;
 
 // The CalculationService
 service Calculator {
