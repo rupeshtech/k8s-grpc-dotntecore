@@ -5,12 +5,12 @@
 
 ## Detailed explanation for each step
 
-There are seperate(detailed) document for each process **describing from scratch step by step**. Each document starts for scratch till end. So read each steps carefully
+There are seperate(detailed) document for each process **describing step by step(from scratch)**. Each document starts for scratch till end. So read each steps carefully
 Detailed document for:
 
-1. [Create](https://github.com/rupeshtech/k8s-grpc-dotntecore/blob/master/SampleGrpcService/README.md) grpc in C# (.NET Core 3.0)
-2. [Test](https://github.com/rupeshtech/k8s-grpc-dotntecore/blob/master/Tests/README.md) using grpcurl
-3. [Deploy](https://github.com/rupeshtech/k8s-grpc-dotntecore/blob/master/k8s-manifests/README.md) in Azure Kubernetes (aks)
+1. [How to Create](https://github.com/rupeshtech/k8s-grpc-dotntecore/blob/master/SampleGrpcService/README.md) grpc in C# (.NET Core 3.0)
+2. [How to Test](https://github.com/rupeshtech/k8s-grpc-dotntecore/blob/master/Tests/README.md) using grpcurl
+3. [How to Deploy](https://github.com/rupeshtech/k8s-grpc-dotntecore/blob/master/k8s-manifests/README.md) in Azure Kubernetes (aks)
 
 ## Prerequisites
 
