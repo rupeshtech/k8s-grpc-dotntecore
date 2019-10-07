@@ -1,12 +1,12 @@
 # gRPC
 
-    This example demonstrates step by step to create, run, deploy and  consume a gRPC service in .NetCore 3.0
-    Whole process is has been categarized in 3 main section **Create, Test and Deploy**.
+    This example demonstrates step by step to create, run, deploy and  consume a gRPC service in .NetCore 3.0.
+    Whole process is has been categorized in 3 main section **Create, Test and Deploy**.
 
 ## Detailed explanation for each step
-This document in overview of create, test and deploy steps. 
-There are seperate detailed document for each step.
-Detailed document for
+
+There are seperate(detailed) document for each process **describing from scratch step by step**. Each document starts for scratch till end. So read each steps carefully
+Detailed document for:
 
 1. [Create](https://github.com/rupeshtech/k8s-grpc-dotntecore/blob/master/SampleGrpcService/README.md) grpc in C# (.NET Core 3.0)
 2. [Test](https://github.com/rupeshtech/k8s-grpc-dotntecore/blob/master/Tests/README.md) using grpcurl
@@ -64,8 +64,6 @@ grpcurl servername:port describe packagename.servicename.MethodName (for ex: grp
 ```sh
 grpcurl -d '{requestbody}' servername:port packagename.servicename.MethodName (for ex: grpcurl -d '{"firstNumber":5,"secondNumber":3}' localhost:50051   Services.Calculator/AddNumbers)
 ```
-
-
 For detailed explanation and troubleshotting [grpcurl](https://github.com/rupeshtech/k8s-grpc-dotntecore/tree/master/Tests)
 
 ### Notes
