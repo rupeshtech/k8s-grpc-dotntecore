@@ -58,6 +58,8 @@ kubernetes configs
 ### Notes
 
 > Github grpc project https://github.com/grpc/grpc/tree/master/src/csharp
+
 > grpcurl https://github.com/fullstorydev/grpcurl
+
 > Why grpc is not working (as of now) of Azure Appservice (for windows and linux both) https://github.com/grpc/grpc-dotnet/issues/578, aspnet/AspNetCore#9020 (comment)
 
