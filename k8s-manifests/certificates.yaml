@@ -1,0 +1,7 @@
+apiVersion: "stable.k8s.psg.io/v1"
+kind: "Certificate"
+metadata:
+  name: tls-secret
+  namespace: default
+spec:
+  domain: "<your fqdn>"

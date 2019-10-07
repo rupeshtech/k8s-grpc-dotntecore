@@ -1,0 +1,22 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: grpc-calculator-app
+  labels:
+    k8s-app: grpc-calculator-app
+  namespace: default
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        k8s-app: grpc-calculator-app
+    spec:
+      containers:
+      - name: grpc-calculator-app
+        image: <youracr.azurecr.io>/imagename:tag
+        ports:
+        - containerPort: 50051
+          name: grpc
+      imagePullSecrets: 
+        - name: <secret-name>
