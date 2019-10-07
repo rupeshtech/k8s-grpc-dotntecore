@@ -77,7 +77,7 @@ kubectl patch deploy --namespace kube-system tiller-deploy -p '{"spec":{"templat
 helm init
 ```
 
-7. Kubernetes `ingress`
+7. **Kubernetes `ingress`**
 
 ```sh
 kubectl create -f ingress.yaml
@@ -86,30 +86,34 @@ kubectl create -f ingress.yaml
 
     We've tagged the ingress with the annotation nginx.ingress.kubernetes.io/backend-protocol: "GRPC". This is the magic ingredient that sets up the appropriate nginx configuration to route http/2 traffic to our service.
 
-8. Kubernetes `deployment`
+8. **Kubernetes `deployment`**
 
 ```sh
 kubectl create -f app-deployment.yaml
 ```
-9. Kubernetes `service`
+9. **Kubernetes `service`**
 
 ```sh
 kubectl create -f app-service.yaml
 ```
 
-9. Check `deployment, services and pods`
+9. **Check `deployment, services and pods`**
 
 you can run following commands to check deployment, services and pods
 
-```sh
+```yml
 kubectl get ing -n ingress-basic
 ```
-```sh
+```yml
 kubectl get deployment
 ```
-```sh
+```yml
 kubectl get pods
 ```
-```sh
+```yml
 kubectl logs <pod_name> -f
 ```
+
+### Notes
+
+> Why grpc is not working (as of now) of Azure Appservice (for windows and linux both) https://github.com/grpc/grpc-dotnet/issues/578, aspnet/AspNetCore#9020 (comment)

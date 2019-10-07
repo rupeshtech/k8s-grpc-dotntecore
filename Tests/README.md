@@ -14,13 +14,13 @@ Download grpcurl tool from https://github.com/fullstorydev/grpcurl/releases
 
 See images attached below to see the responses of grpcurl requests
 
-1. create container
+1. **create container**
 
 ```sh
 d container run -p 82:50051 samplegrpcservice -d
 ```
 
-2. list service
+2. **list services**
 
 ```sh
 grpcurl localhost:50051 list
@@ -30,17 +30,17 @@ if you get error **Failed to dial target host "localhost:50051": tls: first reco
 ```sh
 grpcurl -plaintext localhost:50051 list
 ```
-3. list methods
+3. **list methods**
 
 ```sh
 grpcurl -plaintext localhost:50051 list Services.Calculator
 ```
-4. descibe method
+4. **descibe method**
 
 ```sh
 grpcurl -plaintext localhost:50051 describe  Services.Calculator.AddNumbers
 ```
-5. invoke method
+5. **invoke method**
 
 ```sh
 grpcurl -plaintext -d '{"firstNumber":5,"secondNumber":3}' localhost:50051   Services.Calculator/AddNumbers
@@ -51,7 +51,7 @@ grpcurl -plaintext -d '{"firstNumber":5,"secondNumber":3}' localhost:50051   Ser
 To see the step-by-step guide to deploy grpc service in aks. [how to setup aks](https://github.com/rupeshtech/k8s-grpc-dotntecore/blob/master/k8s-manifests/README.md)
 
 
-1. list service
+1. **list services**
 
 ```sh
 grpcurl localhost:50051 list
@@ -61,17 +61,17 @@ if you get error **Failed to dial target host "localhost:50051": tls: first reco
 ```sh
 grpcurl -insecure localhost:50051 list
 ```
-2. list methods
+2. **list methods**
 
 ```sh
 grpcurl -insecure localhost:50051 list Services.Calculator
 ```
-3. descibe method
+3. **descibe method**
 
 ```sh
 grpcurl -insecure localhost:50051 describe  Services.Calculator.AddNumbers
 ```
-4. invoke method
+4. **invoke method**
 
 ```sh
 grpcurl -insecure -d '{"firstNumber":5,"secondNumber":3}' localhost:50051   Services.Calculator/AddNumbers
@@ -82,7 +82,7 @@ grpcurl -insecure -d '{"firstNumber":5,"secondNumber":3}' localhost:50051   Serv
 Server Reflection error: If you are getting error: Failed to list services: server does not support the reflection API
 
 then add in services folder. [ReflectionImplementation](https://github.com/rupeshtech/k8s-grpc-dotntecore/blob/master/SampleGrpcService/Services/ReflectionImplementation.cs)
-```sh
+```C#
 public class ReflectionImplementation : ReflectionServiceImpl
     {
         public ReflectionImplementation() : base(Calculator.Descriptor, Greeter.Descriptor, ServerReflection.Descriptor)
@@ -91,11 +91,15 @@ public class ReflectionImplementation : ReflectionServiceImpl
 
     }
 ```
-and  in program.cs [program.cs](https://github.com/rupeshtech/k8s-grpc-dotntecore/blob/master/SampleGrpcService/Program.cs)
-```sh
+and in [program.cs](https://github.com/rupeshtech/k8s-grpc-dotntecore/blob/master/SampleGrpcService/Program.cs)
+```c#
 endpoints.MapGrpcService<ReflectionImplementation>();
 ```
 
 #### Screenshots
 ![alt text](https://github.com/rupeshtech/k8s-grpc-dotntecore/blob/master/screenshots/test_aks.PNG)
 ![alt text](https://github.com/rupeshtech/k8s-grpc-dotntecore/blob/master/screenshots/vs_16.png)
+
+### Notes
+
+> grpcurl https://github.com/fullstorydev/grpcurl

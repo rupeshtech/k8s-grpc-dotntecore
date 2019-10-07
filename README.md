@@ -12,7 +12,7 @@
 5. You have an image repository (this example used Azure container registry)
 
 
-### Step 1: `Create` gRPC Service 
+## Step 1: `Create` gRPC Service 
 
 1. Create a gRPC service using default template of Visual Studio
 2. Add a Service (named CalculationService)
@@ -24,43 +24,40 @@ For very detailed explanation of visit
 The sample application
 [SampleGrpcService](https://github.com/rupeshtech/k8s-grpc-dotntecore/tree/master/SampleGrpcService)
 
-### Step 2: `Test` gRPC Service
+## Step 2: `Test` gRPC Service
 
 To test gRPC service, we'll use the grpcurl utility:
 1. Download [grpculy utiltiy](https://github.com/fullstorydev/grpcurl/releases)
 2. Run following commands
 
-### list services
+### **list services**
 grpcurl servername:port list  (for ex: grpcurl localhost:50051 list )
 
-### list methods
+### **list methods**
 grpcurl servername:port list packagename.servicename (for ex: grpcurl localhost:50051 list Services.Calculator)
 
-### describe method
+### **describe method**
 grpcurl servername:port describe packagename.servicename.MethodName (for ex: grpcurl localhost:50051 describe  Services.Calculator.AddNumbers)
 
-### Invoke method
+### **invoke method**
 grpcurl -d '{requestbody}' servername:port packagename.servicename.MethodName (for ex: grpcurl -d '{"firstNumber":5,"secondNumber":3}' localhost:50051   Services.Calculator/AddNumbers)
 
-if you are getting error: Failed to dial target host "sever": tls: first record does not look like a TLS handshake
-then add **-plaintext** if your host name is **localhost** or use **-insecure**
 
-For very detailed explanation [how to setup gRPC server in .NET](https://github.com/rupeshtech/k8s-grpc-dotntecore/blob/master/SampleGrpcService/README.md)
+For detailed explanation and troubleshotting  [grpcurl](https://github.com/rupeshtech/k8s-grpc-dotntecore/tree/master/Tests)
 
-The sample application
-[SampleGrpcService](https://github.com/rupeshtech/k8s-grpc-dotntecore/tree/master/SampleGrpcServ)
-
-![alt text](https://github.com/rupeshtech/k8s-grpc-dotntecore/blob/master/screenshots/vs_16.png)
-
-### Step 3: `Deploy` to kubernetes
+## Step 3: `Deploy` to kubernetes
 
 Deploy to Aks
-For step by step detail 
-[how to setup aks](https://github.com/rupeshtech/k8s-grpc-dotntecore/blob/master/k8s-manifests/README.md)
+For step by step explanation on [how to setup aks](https://github.com/rupeshtech/k8s-grpc-dotntecore/blob/master/k8s-manifests/README.md)
 
 kubernetes configs
 [yaml files](https://github.com/rupeshtech/k8s-grpc-dotntecore/blob/master/k8s-manifests)
 
 
+
 ### Notes
+
+> Github grpc project https://github.com/grpc/grpc/tree/master/src/csharp
+> grpcurl https://github.com/fullstorydev/grpcurl
+> Why grpc is not working (as of now) of Azure Appservice (for windows and linux both) https://github.com/grpc/grpc-dotnet/issues/578, aspnet/AspNetCore#9020 (comment)
 

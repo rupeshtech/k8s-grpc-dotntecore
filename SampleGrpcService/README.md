@@ -18,7 +18,7 @@
 6. Register new service in Starup.cs (onlt needed if steps 3 and 4 are performed)
 7. Configure Kestrel Program.cs to listen on port 50051
 7. Also configure Certificate - optional
- ```sh
+ ```c#
 webBuilder.ConfigureKestrel(options =>
                     {
                         options.Listen(IPAddress.Any, 50051, listenOptions =>
@@ -33,6 +33,10 @@ Instead of creating and setting up new gRPC project, you can use project in this
 
 > See also Microsoft Documentation: https://docs.microsoft.com/en-us/aspnet/core/grpc/aspnetcore?view=aspnetcore-3.0&tabs=visual-studio
 > See also kerstel Webserver implementation : https://docs.microsoft.com/en-us/aspnet/core/fundamentals/servers/kestrel?view=aspnetcore-3.0
+> Seel also sever refelction in C# https://github.com/grpc/grpc/blob/master/doc/csharp/server_reflection.md
+> Github grpc project https://github.com/grpc/grpc/tree/master/src/csharp
+> grpcurl https://github.com/fullstorydev/grpcurl
+> Why grpc is not working (as of now) of Azure Appservice (for windows and linux both) https://github.com/grpc/grpc-dotnet/issues/578, aspnet/AspNetCore#9020 (comment)
 
 ![alt text](https://github.com/rupeshtech/k8s-grpc-dotntecore/blob/master/screenshots/vs_1.PNG)
 ![alt text](https://github.com/rupeshtech/k8s-grpc-dotntecore/blob/master/screenshots/vs_2.PNG)
