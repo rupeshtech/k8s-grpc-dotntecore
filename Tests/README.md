@@ -77,6 +77,25 @@ grpcurl -insecure localhost:50051 describe  Services.Calculator.AddNumbers
 grpcurl -insecure -d '{"firstNumber":5,"secondNumber":3}' localhost:50051   Services.Calculator/AddNumbers
 ```
 
-# Using Console App
+#### Trouble shooting
 
-coming soon
+Server Reflection error: If you are getting error: Failed to list services: server does not support the reflection API
+
+then add in services folder. [ReflectionImplementation](https://github.com/rupeshtech/k8s-grpc-dotntecore/blob/master/SampleGrpcService/Services/ReflectionImplementation.cs)
+```sh
+public class ReflectionImplementation : ReflectionServiceImpl
+    {
+        public ReflectionImplementation() : base(Calculator.Descriptor, Greeter.Descriptor, ServerReflection.Descriptor)
+        {
+        }
+
+    }
+```
+and  in program.cs [program.cs](https://github.com/rupeshtech/k8s-grpc-dotntecore/blob/master/SampleGrpcService/Program.cs)
+```sh
+endpoints.MapGrpcService<ReflectionImplementation>();
+```
+
+#### Screenshots
+![alt text](https://github.com/rupeshtech/k8s-grpc-dotntecore/blob/master/screenshots/test_aks.PNG)
+![alt text](https://github.com/rupeshtech/k8s-grpc-dotntecore/blob/master/screenshots/vs_16.PNG)
