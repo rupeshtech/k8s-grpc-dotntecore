@@ -2,13 +2,9 @@
 
     This example demonstrates step by step to create, run, deploy and  consume a gRPC service in .NetCore 3.0
     Whole process is has been categarized in 3 main section **Create, Test and Deploy**.
-    This document in overview of create, test and deploy steps. 
-     
-    
-    
-    
 
 ## Detailed explanation for each step
+This document in overview of create, test and deploy steps. 
 There are seperate detailed document for each step.
 Detailed document for
 
