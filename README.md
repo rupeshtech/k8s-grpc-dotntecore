@@ -72,5 +72,5 @@ For detailed explanation and troubleshotting [grpcurl](https://github.com/rupesh
 
 > grpcurl https://github.com/fullstorydev/grpcurl
 
-> Why grpc is not working (as of now) of Azure Appservice (for windows and linux both) https://github.com/grpc/grpc-dotnet/issues/578, aspnet/AspNetCore#9020 (comment)
+> Why grpc service cannot be deployed on Azure Appservice (for windows and linux both) https://github.com/grpc/grpc-dotnet/issues/578, https://github.com/aspnet/AspNetCore/issues/9020#issuecomment-479600486
 
