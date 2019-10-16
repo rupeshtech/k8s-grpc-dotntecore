@@ -97,7 +97,7 @@ kubectl create -f app-deployment.yaml
 kubectl create -f app-service.yaml
 ```
 
-9. **Check `deployment, services and pods`**
+10. **Check `deployment, services and pods`**
 
 you can run following commands to check deployment, services and pods
 
